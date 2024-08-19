@@ -38,8 +38,8 @@ export const DebouncedSearch = ({
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 10,
     marginVertical: 10,
+    flex: 1
   },
   inputContainer: {
     backgroundColor: "#f0f0f0",

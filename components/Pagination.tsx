@@ -19,6 +19,7 @@ export const Pagination = ({
       <Button
         radius="md"
         title="Previous"
+        style={styles.button}
         onPress={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1 || totalPages === 0}
       />
@@ -28,6 +29,7 @@ export const Pagination = ({
       <Button
         radius="md"
         title="Next"
+        style={styles.button}
         onPress={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages || totalPages === 0}
       />
@@ -46,5 +48,8 @@ const styles = StyleSheet.create({
   },
   pageInfo: {
     fontSize: 16,
+  },
+  button: {
+    width: 100,
   },
 });

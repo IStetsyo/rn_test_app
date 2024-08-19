@@ -29,7 +29,9 @@ export const UserRow = ({ user, onDelete, onEdit }: Props) => {
         <Avatar source={{ uri: user.imageURL }} rounded />
         <Text style={styles.itemText}>{user.firstName}</Text>
         <Text style={styles.itemText}>{user.lastName}</Text>
-        <Text style={styles.email}>{user.email}</Text>
+      </View>
+      <View style={styles.emailContainer}>
+        <Text style={styles.email}>Email: {user.email}</Text>
       </View>
       <View style={styles.buttonContainer}>
         <Button
@@ -61,10 +63,15 @@ const styles = StyleSheet.create({
     gap: 10,
     flexWrap: "wrap",
   },
-  email: { flex: 1 },
+  email: { flex: 1, width: "100%" },
   itemText: {
     textAlign: "left",
     fontSize: 14,
+  },
+  emailContainer: {
+    flexDirection: "row",
+    columnGap: 10,
+    paddingVertical: 10,
   },
   buttonContainer: {
     flexDirection: "row",

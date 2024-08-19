@@ -59,7 +59,8 @@ export default function Modal() {
             label="First Name"
             placeholder="Enter first name"
             errorMessage={errors.firstName?.message}
-            {...field}
+            onChangeText={field.onChange}
+            defaultValue={field.value}
           />
         )}
       />
@@ -71,7 +72,8 @@ export default function Modal() {
             label="Last Name"
             errorMessage={errors.lastName?.message}
             placeholder="Enter last name"
-            {...field}
+            onChangeText={field.onChange}
+            defaultValue={field.value}
           />
         )}
       />
@@ -83,7 +85,8 @@ export default function Modal() {
             label="Email"
             errorMessage={errors.email?.message}
             placeholder="Enter email"
-            {...field}
+            onChangeText={field.onChange}
+            defaultValue={field.value}
           />
         )}
       />
@@ -95,7 +98,8 @@ export default function Modal() {
             label="Logo URL"
             errorMessage={errors.imageURL?.message}
             placeholder="Enter logo URL"
-            {...field}
+            onChangeText={field.onChange}
+            defaultValue={field.value}
           />
         )}
       />
